@@ -29,10 +29,10 @@ export default function Home() {
           <div className={styles['files-container']}>
             <ul className={styles['files-container__list']}>
               {files != null
-                ? Object.values(files).map((file) => {
+                ? Object.values(files).map((file, index) => {
                     return (
                       <>
-                        <li className={styles['files-container__list--file']}>{file.name}</li>
+                        <li key={`${index}-${file.name}`} className={styles['files-container__list--file']}>{file.name}</li>
                       </>
                     );
                   })

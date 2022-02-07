@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    overflow-y: hidden;
     .title-container {
         .title-container__title {
             font-size: 64px;
@@ -15,31 +16,29 @@
         }
     }
 
+    // Scroll Bar Style
     .files-container::-webkit-scrollbar {
         position: relative;
         width: 10px;
         height: 15px;
-        right: 15px;
-        border: solid 20px $azulPalido;
+        right: 15px;        
     }
-    
     .files-container::-webkit-scrollbar-track {
         border-radius: 35px;
         border: solid 2px $azulPalido;
         background-color: $azulClaro;
     }
-    
     .files-container::-webkit-scrollbar-thumb {
         background: $azulOscuro;
-
         border-radius: 15px;
     }
+    // Scroll Bar Style end
 
     .files-container {
         position: relative;
         margin: 20px 0 20px 0;
         width: 270px;
-        height: 260px;
+        height: 290px;
         background-color: $azulPalido;
         color: $blanco;
         box-shadow: 4px 4px 4px rgba(142, 142, 142, 0.867);
@@ -52,6 +51,5 @@
                 list-style: none;
             }
         }
-        /* Scrollbar styles */
     }
 }

@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { Layout } from '../components/Layout';
+import styles from '../styles/myapp.modules.scss';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div className={styles['myapp']}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
