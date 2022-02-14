@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '../styles/components/Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faInstagramSquare, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 const Header = () => {
   const openContainerNav = () => {
@@ -33,14 +35,27 @@ const Header = () => {
         <nav className={styled['links-container']}>
           <ul className={styled['links-list']}>
             <li className={styled['item-list']}>
-              <a href='#!'>ToA4</a>
+              <Link href='/'>
+                <h1 className={styled['item-list-h1']}>ToA4</h1>
+              </Link>
             </li>
             <li className={styled['item-list']}>
-              <a href='#!'>Explain of Code</a>
+                <FontAwesomeIcon icon={faGithub} className={styled['icon']} />
+              <Link href='https://github.com/folayao'  >
+                <h1 className={styled['item-list-h1']}>GitHub</h1>
+              </Link>
             </li>
-
             <li className={styled['item-list']}>
-              <a href='#!'>Contact</a>
+                <FontAwesomeIcon icon={faTwitter} className={styled['icon']} />
+              <Link href='https://twitter.com/folayaodev'>
+                <h1 className={styled['item-list-h1']}>Twitter</h1>
+              </Link>
+            </li>{' '}
+            <li className={styled['item-list']}>
+                <FontAwesomeIcon icon={faInstagramSquare} className={styled['icon']} />
+              <Link href='https://www.instagram.com/f_ospina01/'>
+                <h1 className={styled['item-list-h1']}>Instagram</h1>
+              </Link>
             </li>
           </ul>
         </nav>

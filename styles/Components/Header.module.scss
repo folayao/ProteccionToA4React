@@ -1,6 +1,8 @@
 @import "../Config.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .nav-container {
+    font-family: 'Roboto';
     height: 100%;
     width: 0;
     position: fixed;
@@ -45,10 +47,28 @@
         .links-list {
             flex-direction: column;
             .item-list {
-                padding: 2px 4px 2px 4px;
                 color: $azulClaro;
                 font-size: xx-large;
                 list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                .icon{
+                    color: $azulPalido;
+                    margin: 19px 5px 19px 5px;
+                }
+                .item-list-h1{
+                    margin: 5px 0 5px 0;
+                }
+            }
+            .item-list:hover{
+                color: $blanco;
+                .icon{
+                    color: $azulClaro;
+                }
+            }
+            .item-list:visited, .item-list:active {
+                color: $azulClaro;
+
             }
         }
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Components/Buttons.module.scss';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /**
  * 
  * @param {Text that will be stay into de button} text 
@@ -18,7 +18,7 @@ import styles from '../styles/Components/Buttons.module.scss';
     }
  * @returns 
  */
-const LabelButtonForAddFiles = ({text, setStateOfFiles}) => {
+const LabelButtonForAddFiles = ({ text, setStateOfFiles, icon }) => {
   return (
     <div className={styles['button-addFile-container']}>
       <label className={styles['button-addFile-container__button']}>
@@ -29,6 +29,7 @@ const LabelButtonForAddFiles = ({text, setStateOfFiles}) => {
           onChange={(e) => setStateOfFiles(e.target.files)}
         />
         {text}
+        <FontAwesomeIcon icon={icon} className={styles['icon']} />
       </label>
     </div>
   );
@@ -39,17 +40,18 @@ const PrimaryButton = ({ text, onclic }) => {
     <div className={styles['button-primary-container']}>
       <button className={styles['button-primary-container__button']} onClick={onclic}>
         {text}
+        <FontAwesomeIcon icon={icon} className={styles['icon']} />
       </button>
     </div>
   );
 };
-const SecondaryButton = ({ text, onclic, showImage }) => {
+const SecondaryButton = ({ text, onclic, icon }) => {
   return (
     <div className={styles['button-secondary-container']}>
       <button className={styles['button-secondary-container__button']} onClick={onclic}>
         {text}
+        <FontAwesomeIcon icon={icon} className={styles['icon']} />
       </button>
-      {}
     </div>
   );
 };

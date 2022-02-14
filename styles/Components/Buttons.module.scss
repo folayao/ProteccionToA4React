@@ -15,6 +15,10 @@
         color: $blanco;
         outline: none;
         cursor: pointer;
+        .icon {
+            color: $blanco;
+            margin-left: 3px;
+        }
         .button-addFile-container__button--input {
             display: none;
         }
@@ -42,6 +46,10 @@
         color: $blanco;
         outline: none;
         cursor: pointer;
+        .icon {
+            color: $blanco;
+            margin-left: 3px;
+        }
     }
     .button-primary-container__button:hover {
         box-shadow: inset 1px 1px 1px $azulOscuro;
@@ -65,6 +73,10 @@
         color: $blanco;
         outline: none;
         cursor: pointer;
+        .icon {
+            color: $blanco;
+            margin-left: 3px;
+        }
     }
     .button-secondary-container__button:hover {
         box-shadow: inset 1px 1px 1px $azulOscuro;
